@@ -1,0 +1,2 @@
+# SameUrl4Image
+glide加载URL下无法更新最新图片，使用HTTP协议的Last-Modified或Etag还有glide的signature来实现
