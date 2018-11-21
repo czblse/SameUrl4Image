@@ -10,7 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         reload_btn.setOnClickListener {
-            head_iv.loaderHeadImgWithHead("http://10.0.2.2:8080/a.png")
+            //加载本地的tomcat图片,url保持不变，更换tomcat上面的图片进行测试
+            head_iv.loaderHeadImgWithHead("http://10.10.1.182:8080/a.png")
         }
     }
 }

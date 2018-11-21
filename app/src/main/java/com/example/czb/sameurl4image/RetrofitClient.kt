@@ -1,9 +1,8 @@
-package com.kungeek.android.library.network.retrofit
+package com.example.czb.sameurl4image
 
 import android.content.Context
 import android.text.TextUtils
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import com.kungeek.android.library.network.BaseApiService
 import okhttp3.Cache
 import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
@@ -24,7 +23,7 @@ import java.util.concurrent.TimeUnit
 class RetrofitClient
 private constructor(context: Context, url: String? = null) {
     /** 基础url */
-    private val sBaseUrl = "http://10.0.2.2:8080/"  // 开发_QJM
+    private val sBaseUrl = "http://10.10.1.182/"  // 本地tomcat地址
     /** okhttp */
     private val mOkHttpClient: OkHttpClient
     /** 接口service */

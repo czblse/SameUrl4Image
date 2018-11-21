@@ -1,11 +1,11 @@
-package com.kungeek.android.library.network
+package com.example.czb.sameurl4image
 
-import com.example.czb.sameurl4image.IF_MODIFIED_SINCE
-import com.example.czb.sameurl4image.IF_NONE_MATCH
 import io.reactivex.Observable
-import okhttp3.ResponseBody
 import retrofit2.Response
-import retrofit2.http.*
+import retrofit2.http.HEAD
+import retrofit2.http.Header
+import retrofit2.http.QueryMap
+import retrofit2.http.Url
 
 
 /**
@@ -21,6 +21,7 @@ interface BaseApiService {
     @HEAD
     fun executeGetWithHeaders(@Url url: String, @QueryMap maps: Map<String, String>): Observable<Response<Void>>
 
+    /** HEAD请求，带上Last-Modified或Etag的请求头 */
     @HEAD
     fun getImg(@Url url: String, @Header(IF_NONE_MATCH) lastModify: String): Observable<Response<Void>>
 }
